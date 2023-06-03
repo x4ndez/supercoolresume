@@ -1,15 +1,15 @@
 :root {
 
     --bgcolor: rgb(56, 56, 56);
+    --aside-w: 10%;
 
 }
 
 body {
 
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     margin: 0;
-    overflow-x: hidden;
 
     background-color: var(--bgcolor);
 
@@ -17,15 +17,76 @@ body {
 
 nav {
 
-    display: sticky;
     position: relative;
 
     width: 100%;
     height: 10%;
 
-    background-color: green;
+}
+
+#nav-icon-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--aside-w);
+    height: 100%;
+
+    float: left;
 
 }
+
+#nav-menu {
+
+    display: flex;
+    justify-content: center;
+
+    float: right;
+    margin: 0 15% 0 0;
+
+    height: 90%;
+
+}
+
+#nav-menu div {
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 0 15px 10px 15px;
+    margin: 0 10px 0 10px;
+
+    transition: padding 1s;
+
+}
+
+#nav-menu div a {
+
+    color: white;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-family: Calibri;
+    font-size: 1.5rem;
+
+    top: 0px;
+
+    transition: color 1s;
+
+}
+
+#nav-menu div:hover {
+
+    padding: 0 15px 20px 15px;
+
+}
+
+#nav-menu div a:hover {
+
+    color: grey;
+
+}
+
 
 .page-container {
 
@@ -58,7 +119,7 @@ aside {
 
     float: left;
 
-    width: 10%;
+    width: var(--aside-w);
     height: 100%;
 
     background-color: orange;
@@ -97,4 +158,18 @@ main {
 
     background-color: blue;
 
+}
+
+#nav-icon {
+
+    scale: 0.8;
+
+}
+
+@media screen and (min-width: 1000px) {
+    #nav-icon {
+
+        display: none;
+
+    }
 }
