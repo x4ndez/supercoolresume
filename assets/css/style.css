@@ -1,0 +1,100 @@
+:root {
+
+    --bgcolor: rgb(56, 56, 56);
+
+}
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+
+    background-color: var(--bgcolor);
+
+}
+
+nav {
+
+    display: sticky;
+    position: relative;
+
+    width: 100%;
+    height: 10%;
+
+    background-color: green;
+
+}
+
+.page-container {
+
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: 95%;
+
+    background-color: yellow;
+
+}
+
+header {
+
+    position: relative;
+
+    float: right;
+
+    width: 90%;
+    height: 30%;
+
+    background-color: red;
+
+}
+
+aside {
+
+    position: relative;
+
+    float: left;
+
+    width: 10%;
+    height: 100%;
+
+    background-color: orange;
+
+}
+
+main {
+
+    display: flex;
+    position: relative;
+
+    width: 90%;
+    height: 70%;
+
+    background-color: pink;
+
+}
+
+#content {
+
+    position: relative;
+
+    width: 70%;
+    height: 100%;
+
+    background-color: grey;
+
+}
+
+#about-me {
+
+    position: relative;
+
+    width: 30%;
+    height: 100%;
+
+    background-color: blue;
+
+}
