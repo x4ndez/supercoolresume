@@ -1,31 +1,63 @@
 :root {
 
     --bgcolor: linear-gradient(rgba(56, 56, 56, 0.5), rgba(32, 32, 32, 0.2), rgba(0, 0, 0, 1));
+    --bgcolor02: conic-gradient(at 0% 50%, rgba(0, 207, 62, 0.486), rgba(0, 166, 207, 0.315), rgba(255, 208, 54, 0.63), rgba(0, 0, 0, 0.336));
+    /* --bgcolor03: conic-gradient(at 0% 100%, rgb(0, 207, 62), rgba(0, 166, 207, 0.507), rgb(255, 208, 54), rgb(0, 0, 0)); */
+    /* --bgcolor03: linear-gradient(270deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
+    --bgcolor03: rgba(0, 0, 0, 0.5);
 
 
     --aside-w: 12%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 
 }
 
 body {
 
-    max-width: 100vw;
+    width: 100vw;
     height: 100vh;
     margin: 0;
 
     font-family: Calibri;
-    background-image: var(--bgcolor);
-    background-repeat: no-repeat;
+
+}
+
+.page {
+
+    scroll-snap-align: start;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+#p_landing {
+
+    background-image: var(--bgcolor02);
     background-color: black;
 
 }
 
+#p_about-me {
+
+    background-color: black;
+
+}
+
+#p_projects {}
+
+#p_contact {}
+
 nav {
 
-    position: relative;
+    position: fixed;
+    top: 0%;
 
-    background-color: rgba(0, 0, 0, 0.8);
-    border-bottom: 3px solid rgba(56, 56, 56, 0.5);
+    z-index: 1;
+    background-color: var(--bgcolor03);
+    /* border-bottom: 3px solid rgba(255, 255, 255, 0.2); */
     width: 100%;
     height: 8%;
 
@@ -80,6 +112,14 @@ nav {
     color: grey;
 
 }
+
+#nav-menu a:active {
+
+    padding: 0 15px 10px 15px;
+    color: grey;
+
+}
+
 
 /* Fancy, fancy... Because why not have an animation? */
 
