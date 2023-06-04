@@ -6,6 +6,9 @@
     --bgcolor03: linear-gradient(270deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     /* --bgcolor03: rgba(0, 0, 0, 0.5); */
 
+    --nav-h: 8%;
+    --nav-h-offset: calc(var(--nav-h) + 1%);
+
 
     --aside-w: 12%;
     scroll-behavior: smooth;
@@ -19,6 +22,7 @@ body {
     height: 100vh;
     margin: 0;
 
+    color: white;
     font-family: Calibri;
 
 }
@@ -27,6 +31,13 @@ body {
 
     scroll-snap-align: start;
     z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: start;
+
+    background-color: black;
 
     width: 100%;
     height: 100%;
@@ -46,6 +57,66 @@ body {
 
 }
 
+.nav-offset {
+
+    width: 100%;
+    height: var(--nav-h-offset);
+
+    /* background-color: green; */
+
+}
+
+
+.content-container {
+
+    width: 50%;
+    height: 91%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: start;
+
+    /* background-color: red; */
+
+}
+
+.about-01 {
+
+    width: 100%;
+    height: 30%;
+    margin: 1%;
+    background-color: rgb(46, 46, 46);
+
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+.about-02 {
+
+    width: 68%;
+    height: 30%;
+    margin: 1%;
+    background-color: rgb(46, 46, 46);
+
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+.about-03 {
+
+    width: 28%;
+    height: 30%;
+    margin: 1%;
+    background-color: rgb(46, 46, 46);
+
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
 #p_projects {}
 
 #p_contact {}
@@ -59,7 +130,7 @@ nav {
     background-image: var(--bgcolor03);
     /* border-bottom: 3px solid rgba(255, 255, 255, 0.2); */
     width: 100%;
-    height: 8%;
+    height: var(--nav-h);
 
 }
 
@@ -170,6 +241,24 @@ nav {
 
     37.3% {
         scale: 1;
+    }
+
+    70% {
+
+        transform: skewY(0deg);
+
+    }
+
+    70.1% {
+
+        transform: skewY(180deg);
+
+    }
+
+    70.2% {
+
+        transform: skewY(0deg);
+
     }
 
     100% {
