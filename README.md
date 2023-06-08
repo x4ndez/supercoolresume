@@ -6,6 +6,7 @@
 
 - [Introduction](#introduction)
 - [Developer Comments](#developer-comments)
+- [Deployed Application](#deployed-application)
 - [Creators](#creators)
 - [License](#license)
 
