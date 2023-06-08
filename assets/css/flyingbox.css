@@ -1,0 +1,68 @@
+#box {
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+
+    width: 5rem;
+    height: 5rem;
+
+    animation-name: box-anim;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+    background-color: rgba(0, 0, 0, 0.1);
+
+    scale: 1;
+
+    transition: background-color 1s;
+
+}
+
+#box:hover {
+
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+@keyframes box-anim {
+
+    0% {
+        top: calc(0% - 2.5rem);
+        left: calc(50% - 2.5rem);
+        transform: rotate(0deg);
+        scale: 1.0;
+    }
+
+    25% {
+        top: calc(50% - 2.5rem);
+        left: calc(100% - 2.5rem);
+        transform: rotate(180deg);
+    }
+
+    40% {
+
+        top: calc(45% - 2.5rem);
+        left: calc(62% - 2.5rem);
+        scale: 0.5;
+    }
+
+    50% {
+        top: calc(100% - 2.5rem);
+        left: calc(50% - 2.5rem);
+        scale: 1.2;
+    }
+
+    75% {
+        top: calc(50% - 2.5rem);
+        left: calc(0% - 2.5rem);
+        scale: 1.5;
+    }
+
+    100% {
+        top: calc(0% - 2.5rem);
+        left: calc(50% - 2.5rem);
+        transform: rotate(0deg);
+        scale: 1.0;
+    }
+
+}
