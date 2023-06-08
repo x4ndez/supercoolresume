@@ -22,8 +22,16 @@ body {
     height: 100vh;
     margin: 0;
 
+    overflow-x: hidden;
+
     color: white;
     font-family: Calibri;
+
+}
+
+a {
+
+    text-decoration: none;
 
 }
 
@@ -53,7 +61,15 @@ body {
 
 #p_about-me {
 
-    background-color: black;
+    background-image: url("../img/IMG_2514.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#p_contact {
+
+    background-color: rgb(41, 41, 41);
 
 }
 
@@ -73,30 +89,24 @@ body {
     height: 91%;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    align-content: start;
+    align-content: flex-start;
 
     /* background-color: red; */
 
 }
 
-.page h2 {
+#about-photo {
 
-    display: block;
-    position: relative;
-
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 10px;
-
-    height: min-content;
-    weight: min-content;
-
+    min-width: 200px;
+    min-height: 250px;
+    max-width: 200px;
+    max-height: 250px;
+    display: inline-block;
+    background-color: grey;
     border-radius: 10px;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 1rem;
-
+    margin: 1%;
 }
 
 #featured {
@@ -158,45 +168,81 @@ body {
 
 }
 
-.about-01 {
+#content-about-photo {
+
+    width: 30%;
+    height: 40%;
+
+}
+
+#content-about-me {
+
+    width: 66%;
+    height: 40%;
+
+}
+
+#projects-content h3 {
 
     width: 100%;
-    height: 30%;
-    margin: 1%;
-    background-color: rgb(46, 46, 46);
-
-    box-sizing: border-box;
-    padding: 10px;
 
 }
 
-.about-02 {
-
-    width: 68%;
-    height: 30%;
-    margin: 1%;
-    background-color: rgb(46, 46, 46);
+.content-section {
 
     box-sizing: border-box;
     padding: 10px;
+    background-color: rgba(44, 44, 44, 0.8);
+    border-radius: 10px;
+
+    margin: 1%;
 
 }
 
-.about-03 {
+.project-item {
 
-    width: 28%;
-    height: 30%;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 20%;
+    background-color: rgb(44, 44, 44);
+    border-radius: 10px;
     margin: 1%;
-    background-color: rgb(46, 46, 46);
+
+}
+
+.project-item:hover {
 
     box-sizing: border-box;
-    padding: 10px;
+    border: 3px solid rgb(255, 166, 0);
 
 }
 
-#p_projects {}
+.project-item h3 {
 
-#p_contact {}
+    opacity: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 80%;
+    height: 0%;
+    box-sizing: border-box;
+    transition: opacity 2s, height 1s;
+
+}
+
+.project-item:hover h3 {
+
+    height: 20%;
+    opacity: 100%;
+
+
+}
 
 nav {
 
