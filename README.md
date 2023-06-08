@@ -14,7 +14,7 @@ What did I learn doing this exercise? I became a lot better at structuring a pag
 
 ## Developer Comments
 
-With the time I had I wasn't able to design a complete website I was 100% happy with, so some things won't look very polished, and there are bugs.  Some things I added were purely just because I was happy I was able to work out how to make something from a functionality perspective; like the featured scroll box.
+With the time I had I wasn't able to design a complete website I was 100% happy with, so some things won't look very polished, and there are bugs.
 
 ## Creators
 
