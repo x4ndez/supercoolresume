@@ -1,3 +1,7 @@
+# Xande's Resume
+
+![alt text](./assets/img/screenshot.png)
+
 ## Table of contents
 
 - [Introduction](#introduction)
@@ -15,6 +19,10 @@ What did I learn doing this exercise? I became a lot better at structuring a pag
 ## Developer Comments
 
 With the time I had I wasn't able to design a complete website I was 100% happy with, so some things won't look very polished, and there are bugs.
+
+## Deployed Application
+
+<https://x4ndez.github.io/supercoolresume/>
 
 ## Creators
 
