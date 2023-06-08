@@ -1,29 +1,31 @@
+/* -------------------------------------- */
+/* Root */
+/* -------------------------------------- */
+
 :root {
 
     --bgcolor: linear-gradient(rgba(56, 56, 56, 0.5), rgba(32, 32, 32, 0.2), rgba(0, 0, 0, 1));
     --bgcolor02: conic-gradient(at 0% 50%, rgba(0, 207, 62, 0.486), rgba(0, 166, 207, 0.315), rgba(255, 208, 54, 0.63), rgba(0, 0, 0, 0.336));
-    /* --bgcolor03: conic-gradient(at 0% 100%, rgb(0, 207, 62), rgba(0, 166, 207, 0.507), rgb(255, 208, 54), rgb(0, 0, 0)); */
     --bgcolor03: linear-gradient(270deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    /* --bgcolor03: rgba(0, 0, 0, 0.5); */
-
     --nav-h: 8%;
     --nav-h-offset: calc(var(--nav-h) + 1%);
-
-
     --aside-w: 12%;
+
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 
 }
+
+/* -------------------------------------- */
+/* Globals */
+/* -------------------------------------- */
 
 body {
 
     width: 100vw;
     height: 100vh;
     margin: 0;
-
     overflow-x: hidden;
-
     color: white;
     font-family: Calibri;
 
@@ -35,41 +37,106 @@ a {
 
 }
 
+/* -------------------------------------- */
+/* Non-page specific */
+/* -------------------------------------- */
+
+/* MAIN */
+
 .page {
 
     scroll-snap-align: start;
     z-index: 0;
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-content: start;
-
     background-color: black;
-
     width: 100%;
     height: 100%;
 
 }
 
-#p_landing {
+.content-container {
 
-    background-image: var(--bgcolor02);
-    background-color: black;
-
-}
-
-#p_about-me {
-
-    background-image: url("../img/IMG_2514.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 50%;
+    height: 91%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: auto;
 
 }
 
-#p_contact {
+.content-section {
 
-    background-color: rgb(41, 41, 41);
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgba(44, 44, 44, 0.8);
+    border-radius: 10px;
+    margin: 1%;
+
+}
+
+/* -------------------------------------- */
+
+/* NAVBAR */
+
+nav {
+
+    position: fixed;
+    top: 0%;
+    z-index: 1;
+    background-image: var(--bgcolor03);
+    width: 100%;
+    height: var(--nav-h);
+
+}
+
+#nav-icon-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--aside-w);
+    height: 100%;
+    float: left;
+
+}
+
+#nav-menu {
+
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin: 0 15% 0 0;
+    height: 90%;
+
+}
+
+#nav-menu a {
+
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 0 15px 12px 15px;
+    margin: 0 10px 0 10px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-family: Calibri;
+    font-size: 1.0rem;
+    background-color: rgba(0, 0, 0, 0);
+    transition: color 1s, padding 1s, background-color 1s;
+
+}
+
+#nav-menu a:hover {
+
+    padding: 0 15px 20px 15px;
+    color: orange;
+    background-color: rgba(0, 0, 0, 0.2);
 
 }
 
@@ -78,36 +145,22 @@ a {
     width: 100%;
     height: var(--nav-h-offset);
 
-    /* background-color: green; */
+}
+
+/* -------------------------------------- */
+/* Page specific */
+/* -------------------------------------- */
+
+/* LANDING PAGE */
+
+#p_landing {
+
+    background-image: var(--bgcolor02);
+    background-color: black;
 
 }
 
-
-.content-container {
-
-    width: 50%;
-    height: 91%;
-
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: flex-start;
-
-    /* background-color: red; */
-
-}
-
-#about-photo {
-
-    min-width: 200px;
-    min-height: 250px;
-    max-width: 200px;
-    max-height: 250px;
-    display: inline-block;
-    background-color: grey;
-    border-radius: 10px;
-    margin: 1%;
-}
+/* Featured Section */
 
 #featured {
 
@@ -119,7 +172,6 @@ a {
 
     width: 100%;
     height: 30%;
-    /* background: green; */
 
 }
 
@@ -128,9 +180,7 @@ a {
     position: relative;
     display: inline-block;
     margin: 1%;
-
     background-color: black;
-
     width: 25%;
     height: 90%;
 
@@ -157,15 +207,34 @@ a {
 .btn {
 
     position: absolute;
-
     width: 20px;
     height: 20px;
-
     z-index: 1;
-
     background-color: pink;
 
+}
 
+/* End Featured Section */
+
+/* -------------------------------------- */
+
+/* ABOUT ME PAGE */
+
+#p_about-me {
+
+    background-image: url("../img/IMG_2514.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#about-photo {
+
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    border-radius: 10px;
+    margin: 1%;
 }
 
 #content-about-photo {
@@ -182,20 +251,13 @@ a {
 
 }
 
+/* -------------------------------------- */
+
+/* PROJECTS PAGE */
+
 #projects-content h3 {
 
     width: 100%;
-
-}
-
-.content-section {
-
-    box-sizing: border-box;
-    padding: 10px;
-    background-color: rgba(44, 44, 44, 0.8);
-    border-radius: 10px;
-
-    margin: 1%;
 
 }
 
@@ -244,173 +306,14 @@ a {
 
 }
 
-nav {
+/* -------------------------------------- */
 
-    position: fixed;
-    top: 0%;
+/* CONTACT PAGE */
 
-    z-index: 1;
-    background-image: var(--bgcolor03);
-    /* border-bottom: 3px solid rgba(255, 255, 255, 0.2); */
-    width: 100%;
-    height: var(--nav-h);
+#p_contact {
+
+    background-color: rgb(41, 41, 41);
 
 }
 
-#nav-icon-container {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: var(--aside-w);
-    height: 100%;
-
-    float: left;
-
-}
-
-#nav-menu {
-
-    display: flex;
-    justify-content: center;
-
-    float: right;
-    margin: 0 15% 0 0;
-
-    height: 90%;
-
-}
-
-#nav-menu a {
-
-    display: flex;
-    align-items: flex-end;
-
-    box-sizing: border-box;
-    padding: 0 15px 12px 15px;
-    margin: 0 10px 0 10px;
-
-    color: white;
-    text-decoration: none;
-    letter-spacing: 5px;
-    font-family: Calibri;
-    font-size: 1.0rem;
-
-    background-color: rgba(0, 0, 0, 0);
-
-    transition: color 1s, padding 1s, background-color 1s;
-
-}
-
-#nav-menu a:hover {
-
-    padding: 0 15px 20px 15px;
-    color: orange;
-    background-color: rgba(0, 0, 0, 0.2);
-
-}
-
-
-/* Fancy, fancy... Because why not have an animation? */
-
-@keyframes logox {
-
-    0% {
-        scale: 1;
-    }
-
-    24.5% {
-        scale: 1;
-        transform: skewX(0deg);
-    }
-
-    25% {
-        scale: 2;
-        transform: skewX(30deg);
-    }
-
-    25.1% {
-        scale: 1;
-        transform: skewX(0deg);
-    }
-
-    34% {
-        scale: 1;
-        transform: skewX(0deg);
-    }
-
-    34.1% {
-        scale: 1.5;
-        transform: skewX(-30deg);
-    }
-
-    35% {
-        scale: 1;
-        transform: skewX(0deg);
-    }
-
-    37% {
-        scale: 1;
-        transform: skewX(0deg);
-    }
-
-    37.1% {
-        scale: 1.8;
-    }
-
-    37.3% {
-        scale: 1;
-    }
-
-    70% {
-
-        transform: skewY(0deg);
-
-    }
-
-    70.1% {
-
-        transform: skewY(180deg);
-
-    }
-
-    70.2% {
-
-        transform: skewY(0deg);
-
-    }
-
-    100% {
-        scale: 1;
-    }
-
-}
-
-#nav-icon-container #logo {
-
-    position: relative;
-    display: inline;
-    color: white;
-    font-size: 2rem;
-    letter-spacing: 10px;
-    animation-name: logox;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-
-    /* background-color: red; */
-}
-
-#nav-icon {
-
-    scale: 0.8;
-
-}
-
-@media screen and (min-width: 1000px) {
-    #nav-icon {
-
-        display: none;
-
-    }
-}
+/* -------------------------------------- */
