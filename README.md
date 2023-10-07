@@ -1,6 +1,6 @@
 # Xande's Resume
 
-![alt text](./assets/img/screenshot.png)
+![alt text](./assets/screenshot.png)
 
 ## Table of contents
 
